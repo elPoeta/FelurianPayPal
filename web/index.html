@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/contenedor-estilo.css">
+    <link rel="stylesheet" href="static/css/header-estilo.css">
+    <link rel="stylesheet" href="static/css/navegacion-estilo.css">
+    <link rel="stylesheet" href="static/css/side-estilo.css">
+    <link rel="stylesheet" href="static/css/mainSection-estilo.css">
+    <link rel="stylesheet" href="static/css/footer-estilo.css">
+    <link rel="stylesheet" href="static/css/productos-estilo.css">
+    <link rel="stylesheet" href="static/css/carrito-estilo.css">
+    <link rel="stylesheet" href="static/css/compra-estilo.css">
+    <link rel="stylesheet" href="static/css/compraTerminada-estilo.css">
+    <link rel="stylesheet" href="static/css/hamburger-estilo.css">
+    <link rel="stylesheet" href="static/css/paypal.css">
+
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+   
+    <title>Felurian Wine Store</title>
+</head>
+<body>
+    <div class="contenedor">
+        
+        <header class="header">
+             
+            <figure>
+                <a href="index.html"><img src="static/img/logo-header.svg" alt="Felurian" class="logo-header"></a>
+            </figure>
+
+            <h1 class="titulo-header"><a href="index.html">Felurian</a></h1>
+           
+            <div class="form-busqueda">
+                <input type="search" id="buscar" placeholder="Buscar...">
+                <figure>
+                    <img src="static/img/lupa.svg" alt="buscar" class="logo-buscar">
+                </figure>
+            </div>
+            <div class="contenedor-login">
+                <figure>
+                    <img src="static/img/user.svg" alt="login" class="logo-user">
+                </figure>
+                <a href="login.html" class="login" id="login-header">Login</a>
+            </div>
+            <div class="compras">
+                <figure>
+                    <img src="static/img/carrito.svg" alt="carrito" class="carrito-logo">
+                </figure>
+
+                <div class="circulo-compras"><p id="cantidadEnCarritoCompras" class="cantidadEnCarrito">0</p></div>
+            </div>
+        </header>
+        
+        <nav class="nav-bar">
+            <div class="nav-menu" >
+                <ul id="menu-template">
+
+                </ul>
+            </div>
+        </nav>
+        
+        <aside class="side">
+            Filtros de Busqueda
+        
+        </aside>
+        
+        <section class="main-section">
+            <div id="panel-content">
+                
+                <div class="banner">
+               
+                    <div class="banner-badge">
+                          <img src="static/img/logo-banner.svg" class="logo-banner-img">
+                    </div>
+   
+                 <H2><span class="titulo-banner"><span>Felurian</span> <sup> . </sup></span></H2>
+                 <div class="contenedor-tipeo"><span id="tipeo-contenedor"></span>
+                  <span class='tipeo-cursor'>|</span>
+                </div> 
+               
+                </div>
+  
+                  <div class="content-grilla">
+               
+                    <div>
+                          <a class="fondo-grilla" href="#">
+                              <div class="texto-grilla">
+                                  <h2>Promociones</h2>
+                              </div>
+                              <img src="static/img/promos-grilla.jpg">
+                          </a>
+                      </div>
+      
+                  <div>
+                          <a class="fondo-grilla" href="#" onclick="buscarPorCategoria(1)">
+                              <div class="texto-grilla">
+                                  <h2>Vinos</h2>
+                              </div>
+                              <img src="static/img/vinos-grilla.jpg">
+                          </a>
+                 </div>
+       
+                <div>
+                          <a class="fondo-grilla" href="#" onclick="buscarPorCategoria(2)">
+                              <div class="texto-grilla">
+                                  <h2>Delicias</h2>
+                              </div>
+                              <img src="static/img/delicias-grilla.jpg">
+                          </a>
+                      </div>
+      
+                      <div>
+                          <a class="fondo-grilla" href="#" onclick="buscarPorCategoria(3)">
+                              <div class="texto-grilla">
+                                  <h2>Accesorios</h2>
+                              </div>
+                              <img src="static/img/accesorios-grilla.jpg">
+                          </a>
+                      </div>
+              </div>
+              </div>  
+                 <div id="paypal-button"></div>  
+        </section>
+        
+        <footer class="footer">
+            <div>
+            <p class="autor"><a href="https://www.linkedin.com/in/leonardo-tosetto" target="_blank"><img src="static/img/linkedin.svg">Leonardo Tosetto</a> | <a href="https://github.com/elPoeta" target="_blank"><img src="static/img/github.svg">@elPoeta</a> | <a href="https://t.me/elPoetaDeveloper" target="_blank"><img src="static/img/telegram.svg">@elPoetaDeveloper</a></p>   
+            </div>
+            <div >
+                <p class="copy">&copy; 2018</p>
+            </div>
+            
+        </footer>
+        <div class="nav-hamburger">
+                <a href="#" id="nav-icon-hamburger">&#9776;</a>
+        </div>
+    </div>
+
+    <div>
+            <div class="panel-carroCompras hide-panel">
+                    <h5 id="carritoVacio">Carrito Vacio!</h5>   
+            </div>     
+        <div class="panel-carroCompras hide-panel">
+               
+            <ul class="panel-carrito-grid" id="panel-carrito">
+
+            </ul> 
+          
+                <h5 class="total-panel-carrito">Total $<span id="total-carrito">0</span></h5>    
+            
+            <button class="btn-finalizarCompra" id="btn-Comprar">Finalizar Compra</button>
+        </div>
+        <div class="nav-panel">
+                <a href="#" class="btn-cerrar-nav-panel" id="btn-nav-panel" >&times;</a>
+                <ul id="panel-side-menu">
+    
+                </ul>
+        </div>
+        <img id="loading" src="static/img/loading.svg" alt="Loading">
+</div>
+
+
+    <script src="static/js/http.js"></script>
+    <script src="static/js/carrito.js"></script>
+    <script src="static/js/menu.js"></script>
+    <script src="static/js/productos.js"></script>
+    <script src="static/js/lupa.js"></script>
+    <script src="static/js/compra.js"></script>
+    <script src="static/js/main.js"></script>
+    
+     <script> 
+    const URL_PAYPAL_SERVER = 'api/privado/PaypalServer'; 
+    paypal.Button.render({   
+       
+    env: 'sandbox', // O 'production'
+    
+    style: {
+            label: 'pay', // checkout | credit | buynow | paypal
+            size:  'responsive', // small | medium | large | responsive
+            shape: 'pill',   // pill | rect
+            color: 'gold'   // gold | blue | silver | black
+        },
+    // Set up payment:
+    // 1.  Agregar payment callback
+    commit: true,
+    payment: function(data, actions) {
+      // 2. Pedir request al server
+      console.log('request'+data);
+      return actions.request.post(URL_PAYPAL_SERVER)
+        .then(function(res) {
+          // 3. Return res.id desde response
+       console.log('response');
+          return res.id;
+        });
+    },
+    // Ejecutar el payment:
+    // 1. Agregar onAuthorize callback
+    onAuthorize: function(data, actions) {
+      // 2. Pedir request al server
+      return actions.request.post(URL_PAYPAL_SERVER, {
+        paymentID: data.paymentID,
+        payerID:   data.payerID
+      })
+        .then(function(res) {
+          console.log(res);
+          Compra.CompraConfirmada();
+          //Carrito.consultarCarrito();
+        });
+    },
+    
+    onCancel: function (data, actions) {
+            console.log("CANCEL!! ");
+          return actions.redirect();
+        },
+    onError: function (error) {
+         console.log("ERROR! ",error);
+          
+        return alert("ERROR! "+error);
+        }
+  }, '#paypal-button');
+
+ </script>
+
+</body>
+</html>

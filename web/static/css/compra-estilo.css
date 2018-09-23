@@ -1,0 +1,56 @@
+.seccion-compras{
+    display:grid;
+    grid-template-columns: 1fr;
+/*    grid-template-rows: 200px; */
+}
+
+.seccion-compras ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.lista-compras{
+    display: grid; 
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 200px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.lista-compras img{
+    box-sizing: border-box;    
+    max-width: 100%;
+    height: 180px;
+    justify-self: left;
+    padding: 5px; 
+    
+}
+
+.lista-compras h2,p{
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    color: #48001E;
+}
+
+.subtotal{
+    font-size: .6em;
+    text-align: center;
+    color: #48001E;
+}
+
+.contenedor-total-btn{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contenedor-total-btn h2{
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    color: #48001E;
+    justify-content: center;
+}

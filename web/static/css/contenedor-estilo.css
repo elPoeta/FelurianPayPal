@@ -1,0 +1,46 @@
+body{
+    font-family: 'Lato', sans-serif; 
+}
+html{
+    /*position: relative;*/
+  min-height: 100%;
+  position: relative;
+}
+.contenedor{
+    display : grid;
+    grid-template-columns: repeat(8 1fr);
+    grid-template-rows: 100px 60px auto 100px;
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "nb nb nb nb nb nb nb nb"
+        "sd sd ms ms ms ms ms ms"
+        "fo fo fo fo fo fo fo fo";
+
+}
+#loading {
+    position: fixed;
+    width: 8%;
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+@media screen and (max-width : 1200px){
+    .contenedor{
+        grid-template-rows: 70px 40px auto 70px;
+    }
+}
+@media screen and (max-width : 750px){}
+
+@media screen and (max-width : 524px){
+    .contenedor{
+        display : grid;
+        grid-template-columns: repeat(6 1fr);
+        grid-template-rows: 60px auto 60px;
+        grid-template-areas: 
+            "mh hd hd hd hd hd"
+            "ms ms ms ms ms ms"
+            "fo fo fo fo fo fo";
+    
+    }
+    
+}

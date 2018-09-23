@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="75.000008pt"
+   height="109.40515pt"
+   viewBox="0 0 75.000008 109.40515"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg6464"
+   sodipodi:docname="candado-cerrado.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <defs
+     id="defs6468" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview6466"
+     showgrid="false"
+     inkscape:zoom="0.49277344"
+     inkscape:cx="578.57883"
+     inkscape:cy="-705.99224"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6464" />
+  <metadata
+     id="metadata6458">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="matrix(0.00855188,0,0,-0.00855188,9.8269233e-6,109.45646)"
+     id="g6462"
+     style="fill:#000000;stroke:none">
+    <path
+       d="m 4115,12785 c -659,-72 -1254,-378 -1775,-911 -310,-318 -530,-633 -745,-1069 -329,-667 -501,-1379 -522,-2158 l -6,-239 -26,-10 C 801,8300 569,8140 417,7966 186,7701 54,7407 11,7060 3,7003 0,6314 0,4970 0,2789 -1,2847 56,2592 137,2229 306,1889 564,1566 661,1444 901,1201 1027,1098 1681,558 2551,196 3520,61 3840,16 4000,6 4385,6 c 385,0 545,10 865,55 969,135 1839,497 2493,1037 126,103 366,346 463,468 258,323 427,663 508,1026 57,255 56,197 56,2378 0,1344 -3,2033 -11,2090 -43,347 -175,641 -406,906 -152,174 -384,334 -624,432 l -26,10 -6,239 c -15,565 -111,1096 -290,1608 -151,433 -378,871 -627,1210 -219,299 -515,595 -805,805 -550,398 -1224,584 -1860,515 z m 585,-1545 c 393,-85 717,-293 991,-637 208,-261 392,-636 495,-1012 85,-309 129,-595 142,-920 l 7,-161 H 4385 2435 l 7,166 c 23,563 155,1090 378,1522 320,616 788,982 1361,1062 110,15 411,4 519,-20 z M 4592,6125 c 486,-85 877,-443 998,-915 123,-479 -60,-997 -457,-1296 l -73,-55 v -570 -569 h -675 -675 v 569 570 l -73,55 c -489,368 -636,1037 -346,1574 181,337 501,568 881,637 100,18 317,18 420,0 z"
+       id="path6460"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

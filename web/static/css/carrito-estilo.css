@@ -1,0 +1,219 @@
+.panel-carroCompras{
+    width: 20%;
+    left: 70%;
+    height: auto;
+    padding: 5px;
+    position: fixed;
+    z-index:100;
+    top:100px;
+    background-color:rgba(255, 255, 255, 0.95);
+    border: 2px solid #48001E;
+    border-radius: 15px;
+    opacity: 1;   
+    overflow: hidden;
+    text-align: center;
+}
+#carritoVacio{ 
+    font-size: 1.5rem;
+    padding: 25px;
+    color: #48001E;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 800;
+}
+.hide-panel{
+    display: none;
+}
+.panel-carrito-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;    
+}
+.lista-panel-carrito{
+    display: grid; 
+    grid-template-columns: 50px 1fr 50px 30px 30px;
+    grid-template-rows: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-panel-carrito{
+    box-sizing: border-box;    
+    max-width: 100%;
+    height: 80px;
+    justify-self: left;
+    padding: 5px; 
+    
+}
+
+.nombreProducto-panel-carrito{
+  font-size: 1.5rem;
+  text-align: center;
+  color: #48001E;
+}
+.simboloMoneda-panel-carrito{
+    color: #4e4e4e;
+}
+.cambiarCantidad-panel-carrito, 
+.eliminarProducto-panel-carrito{
+    font-size: 1.8rem;
+    color: #4e4e4e;
+    text-decoration: none;
+}
+.cambiarCantidad-panel-carrito:hover{
+    color: #116611;
+    cursor: pointer;
+}
+
+.eliminarProducto-panel-carrito:hover{
+    color: #48001E;
+    cursor: pointer;
+}
+
+.spinner-panel-carrito{
+    width: auto;
+    font-size: 1.1rem;
+    background: #fff;
+    border: 1px solid #48001E;
+    padding: 2px;
+    color: #000;
+}
+
+.rango-panel-carrito{
+    display: block;
+}
+
+.total-panel-carrito{
+    display: block;  
+    font-size: 1.5rem;
+    padding: 15px;
+    color: #48001E;
+    text-transform: uppercase;
+
+
+}
+
+.btn-finalizarCompra{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background: #116611;
+    color: #fff; 
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-finalizarCompra:hover{
+    background: #55AA55;
+    color: #48001E;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 1200px){
+    .panel-carroCompras{
+        width: 40%;
+        left: 55%;
+        top:70px;
+    }
+    
+    .panel-carrito-grid{
+        grid-template-rows: 80px;    
+    }
+    .lista-panel-carrito{
+        grid-template-columns: 50px 1fr 40px 30px 30px;
+        grid-template-rows: 80px;
+    }
+    
+    .img-panel-carrito{
+        height: 70px;    
+    }
+    
+    .nombreProducto-panel-carrito{
+      font-size: 1.2rem;
+    }
+    
+    .spinner-panel-carrito{
+    width: auto;
+    font-size: 1.1rem;
+    background: #DC93AF;
+    border: 1px solid #fff;
+    padding: 2px;
+    color: #fff;
+}
+.cambiarCantidad-panel-carrito{
+    padding: 2px;
+}
+    .eliminarProducto-panel-carrito{
+       padding: 2px;
+    }
+    .total-panel-carrito{
+        font-size: 1.2rem;
+    }
+    
+    .btn-finalizarCompra{
+        padding: 8px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width : 750px){
+    .panel-carroCompras{
+        width: 50%;
+        left: 45%;
+    }
+    .nombreProducto-panel-carrito{
+        font-size: 1rem;
+      }
+
+      .total-panel-carrito{
+        font-size: 1rem;
+    }
+    
+    .btn-finalizarCompra{
+        padding: 5px;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width : 524px){
+    .panel-carrito-grid{
+        grid-template-rows: 60px;    
+    }
+    .lista-panel-carrito{
+        grid-template-columns: 40px 1fr 30px 20px 20px;
+        grid-template-rows: 60px;
+    }
+    
+    .img-panel-carrito{
+        height: 60px;    
+    }
+    
+    .panel-carroCompras{
+        width: 60%;
+        left: 35%;
+        top:60px;
+    }
+    .nombreProducto-panel-carrito{
+        font-size: .8rem;
+      }
+
+      .spinner-panel-carrito{
+        font-size: .9rem;
+   
+    }
+
+      .total-panel-carrito{
+        font-size: .8rem;
+    }
+    .cambiarCantidad-panel-carrito{
+        font-size: 1.5rem;
+    }    
+    .eliminarProducto-panel-carrito{
+        font-size: 1.5rem;
+    }
+    .btn-finalizarCompra{
+        padding: 5px;
+        font-size: .7rem;
+    }
+}

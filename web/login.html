@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/login-estilo.css">
+    
+    <script src="static/js/login.js" defer></script>
+    <script src="static/js/http.js" defer></script>
+    <script src="static/js/registro.js" defer></script>
+    
+    <title>Login</title>
+</head>
+<body>
+        
+  <div class="container">
+        <div class="backbox">
+          <div class="loginMsg">
+            <div class="textcontent">
+              <h2 class="title">Felurian</h2>  
+              <hr>
+              <p class="title">No tenes cuenta?</p>
+              <p>Registrate.</p>
+              <button id="switch1">CREAR CUENTA</button>
+            </div>
+          </div>
+          
+            <div class="signupMsg visibility">
+            <div class="textcontent">
+              <h2 class="title">Felurian</h2> 
+              <hr> 
+              <p class="title">Tenes cuenta?</p>
+              <p>Inicia sesion.</p>
+              <button id="switch2">INICIAR SESION</button>
+            </div>
+          </div>
+        </div>
+        
+    
+        <div class="frontbox">
+          <div class="login">
+            <h2>LOGIN</h2>
+            <div class="inputbox">
+              <input type="email" id="log-email" name="email" placeholder="  EMAIL">
+              <input type="password"  id="log-pass" name="password" placeholder="  PASSWORD">
+            </div>
+            <p></p>
+            <button id="btn-login">INICIAR</button>
+          </div>
+    
+          <div class="signup hide">
+            <h2>CREAR CUENTA</h2>
+            <div class="inputbox">
+              <input type="text" id="sign-nombre" name="nombre" placeholder="  NOMBRE">
+              <input type="text" id="sign-apellido" name="apelido" placeholder="  APELLIDO">
+              <input type="email" id="sign-email" name="email" placeholder="  EMAIL">
+              <input type="password" id="sign-pass" name="password" placeholder="  PASSWORD">
+              <input type="password" id="sign-confirm" name="conf-password" placeholder="  PASSWORD">
+            </div>
+            <button id="btn-registrar">CREAR</button>
+          </div>
+    
+        </div>
+   
+      </div>
+            
+</body>
+</html>

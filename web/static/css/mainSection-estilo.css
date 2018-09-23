@@ -1,0 +1,162 @@
+.main-section{
+    display: grid;
+    grid-area: ms;
+    /*background: #DDDDDE;*/
+    
+}
+
+.banner{
+    padding: 2%;
+    color: #fff;
+    text-align:center;
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/fondo-banner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.logo-banner-img{
+    width: 15%;
+    max-height: 15%;
+    padding: 3%;
+}  
+.titulo-banner {
+     font-size: 4.5rem;
+     font-weight:900;
+     padding: 2%; 
+    }  
+.titulo-banner span{
+        background:rgba(255,255,255, .6);
+        color: #48001E;
+        border: 2px solid #DC93AF;
+        border-radius: 10px;
+   
+    }     
+ .tipeo-cursor { 
+     font-size: 2.6rem;
+    }
+.contenedor-tipeo{
+    margin-top: 25px;
+}
+#tipeo-contenedor{
+        color:#fff;
+        text-decoration: none;
+        background: rgba(220, 147, 175, .7);
+        font-size:2.6rem;
+
+}   
+
+.content-grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    margin : 0 auto;
+    max-width: 80%; 
+}
+
+.fondo-grilla{
+        position: relative;   
+        display: inline-block;
+    }
+    
+    .fondo-grilla img{
+        box-sizing: border-box;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        padding: .5em;
+    }
+    
+    
+    .texto-grilla h2{
+        font-size: 3rem;
+        color: #DDDDDE;
+        border: 3px solid #DDDDDE;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        background: rgba(0, 0, 0, .5);
+        padding: 10px;
+        
+    }
+    
+    .texto-grilla h2:hover{
+        color: #DC93AF;
+        border: 3px solid #DC93AF;
+    }
+
+    @media screen and (max-width : 1200px){
+        
+        .logo-banner-img{
+            width: 20%;
+            max-height: 18%;
+        }  
+    
+        .content-grilla{
+            grid-template-columns: 1fr 1fr;  
+            
+        }
+        
+        .fondo-grilla{
+                position: relative;   
+                display: inline-block;
+            }
+            
+            .fondo-grilla img{
+                box-sizing: border-box;
+                display: block;
+                max-width: 100%;
+                height: auto;
+                padding: .5em;
+            }
+            
+            .texto-grilla h2{
+                font-size: 2rem;
+                
+            }
+        
+           
+    }
+    @media screen and (max-width : 750px){
+        .titulo-banner {
+            font-size: 3rem;
+           }  
+    
+        .tipeo-cursor { 
+            font-size: 2rem;
+           }
+       #tipeo-contenedor{
+               font-size:2rem;
+       }  
+       
+       .content-grilla{
+        grid-template-columns: 1fr;  
+        
+    }
+    }
+
+    @media screen and (max-width : 524px){
+    
+        .logo-banner-img{
+            width: 24%;
+            max-height: 22%;
+        }  
+        .titulo-banner {
+            font-size: 2.6rem;
+           }  
+    
+        .tipeo-cursor, #tipeo-contenedor  { 
+            font-size: 1.8rem;
+           }
+           .content-grilla{
+            max-width: 90%; 
+        }
+    }
+    
+@keyframes blink {
+100% 
+{ opacity:1; 
+}
+}

@@ -1,6 +1,8 @@
 
 package elpoeta.felurian.domain;
 
+import elpoeta.felurian.util.ValidarEmail;
+
 
 
 /**
@@ -54,7 +56,12 @@ public class Usuario {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if(ValidarEmail.validate(email)){
+            this.email = email;
+        }else{
+            throw new IllegalArgumentException("Verificar email");
+        }
+        
     }
 
     public String getPassword() {

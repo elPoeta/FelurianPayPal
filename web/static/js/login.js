@@ -54,12 +54,26 @@ btnLogin.addEventListener('click', (e)=>{
    Http.post(URL_LOGIN_SERVER,loginUsuario)
            .then(response => response.json())
   .then( data => {
+       console.log('log >>> ',data);
            if(data !== null && data !== 'error'){
             window.location.replace("index.html");
+           }else{
+                      errorLogueo("Error al iniciar sesion");
+
            }
                     
     }).catch (err => {
        console.log("error",err);
+       errorLogueo("Error al iniciar sesion "+err);
 });
   
 });
+
+function errorLogueo(msg){
+    let template = 
+            `<div class="mensaje-login">
+                 <p>${msg}</p>
+             </div>`;
+    document.querySelector('#panel-login-msg').innerHTML=template;
+    
+}

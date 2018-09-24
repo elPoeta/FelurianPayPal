@@ -5,6 +5,7 @@ package elpoeta.felurian.web.server;
 import elpoeta.felurian.domain.Usuario;
 import elpoeta.felurian.repository.impl.UsuarioRepositoryImpl;
 import elpoeta.felurian.util.GsonUtil;
+import elpoeta.felurian.util.ValidarEmail;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,7 +42,9 @@ public class RegistroServer extends HttpServlet {
 
             Usuario userParametro = GsonUtil.CONVERTIR.fromJson(texto, Usuario.class); 
             System.out.println(userParametro);
-            Usuario userBD = UsuarioRepositoryImpl.getInstance().buscarPorEmail(userParametro.getEmail());  
+            if(validarUsuario(userParametro)){
+            
+                Usuario userBD = UsuarioRepositoryImpl.getInstance().buscarPorEmail(userParametro.getEmail());  
             System.out.println(userBD);
             if( userBD == null && userParametro.getPassword().equals(userParametro.getConfirmPassword()))
             {
@@ -49,9 +52,13 @@ public class RegistroServer extends HttpServlet {
                 out.println(GsonUtil.CONVERTIR.toJson("OK"));
             }else{
                   System.out.println("Error");
-                out.println(GsonUtil.CONVERTIR.toJson("ERROR"));
+                out.println(GsonUtil.CONVERTIR.toJson("error"));
             }
-
+            }else{
+                  System.out.println("Error");
+                out.println(GsonUtil.CONVERTIR.toJson("error"));
+            
+            }
         } catch (ClassNotFoundException ex) {
             out.println("Verificar: " + ex.getMessage());
             System.out.println("Class > "+ex.getMessage());
@@ -66,6 +73,16 @@ public class RegistroServer extends HttpServlet {
         }
     }
     
-
+  private boolean validarUsuario(Usuario u){
+    if(u.getNombre() != "" && u.getNombre() !=null 
+       && u.getApellido() != "" && u.getApellido() !=null
+       && ValidarEmail.validate(u.getEmail()) 
+       && u.getPassword() != "" && u.getPassword() != null 
+       && u.getConfirmPassword() != "" && u.getConfirmPassword() !=null){
+        return true;
+    }
+      
+      return false;
+}
 
 }

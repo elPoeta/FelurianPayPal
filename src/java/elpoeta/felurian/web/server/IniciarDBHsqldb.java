@@ -30,9 +30,9 @@ public class IniciarDBHsqldb extends HttpServlet {
         try {
         System.out.println("Starting Database");
         HsqlProperties p = new HsqlProperties();
-        p.setProperty("server.database.0", "file:/home/elpoeta/BBDD/dbfelurian");
-        //p.setProperty("server.database.0", "file:resources/dbfelurian");
-        p.setProperty("server.dbname.0", "dbfelurian");
+        p.setProperty("server.database.0", "file:/home/elpoeta/BBDD/feluriandb");
+        //p.setProperty("server.database.0", "file:resources/feluriandb");
+        p.setProperty("server.dbname.0", "felurian_db");
         p.setProperty("server.port", "9001");
         
         Server server = new Server();

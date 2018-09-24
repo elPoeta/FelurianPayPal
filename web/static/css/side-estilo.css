@@ -1,9 +1,33 @@
 .side{
     display: grid;
     grid-area: sd;
-    background: slategray;
+    background: #fff;
 }
-
+#side-content{
+    display: grid;
+    grid-template-columns: 500px;
+   
+  
+    
+}
+.side-article{
+    padding: 20px;
+}
+.side-article img{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+}
+.side-article h2{
+    font-size: 1.8em;
+    color: #48001E;
+   padding: 8px;
+}
+.side-article p{
+    font-size: 1.2em;
+    color: #933157;
+    padding: 8px;
+}
 @media screen and (max-width : 750px){}
 
 @media screen and (max-width : 524px){

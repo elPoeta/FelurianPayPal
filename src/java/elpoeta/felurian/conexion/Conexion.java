@@ -13,8 +13,8 @@ import java.sql.SQLException;
 public class Conexion {
      private static Conexion INSTANCE = null;
      //private static String LABASE = "jdbc:mysql://localhost/db_felurianconlogin";
-     private static String LABASE = "jdbc:hsqldb:file:/home/elpoeta/BBDD/dbfelurian/dbfelurian"; 
-     //private static String LABASE = "jdbc:hsqldb:file:resources/dbfelurian/dbfelurian"; 
+     private static String LABASE = "jdbc:hsqldb:file:/home/elpoeta/BBDD/feluriandb/felurian_db"; 
+     //private static String LABASE = "jdbc:hsqldb:file:resources/feluriandb/felurian_db"; 
      private static String LABASEUSUARIO = "SA";  // "root";
      private static String LABASECLAVE = "";    //"root";
 

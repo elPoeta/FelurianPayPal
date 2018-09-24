@@ -58,7 +58,7 @@ btnFinalizarCompra.addEventListener('click', e =>{
     Http.get(URL_FINALIZAR_COMPRA_SERVER_PRIVADO)
             .then(data => {
              console.log('data >>',data);
-             if(data !=='error'){
+             if(data !== null && data !=='error'){
               Compra.verCompra();
              }else{
                  window.location.replace("login.html");

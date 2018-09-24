@@ -1,7 +1,66 @@
 body{
+   
     background-color: #A8A8A8;
   }
+  .login-section{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 50px 1fr;
+      
+  }
+  .header{
+    display: grid;
+    background:#48001E;
+    grid-template-columns: 80px 1fr;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    top : 0px;
+    z-index: 100;
+}
+
+.logo-header{
+    max-height: 70px;
+    padding: 5px;
+}
+
+.titulo-header{
+    font-size: 3.1rem;
+    text-transform: uppercase;
+    align-self: center;
+    font-weight: 900;
+
+}
+
+.titulo-header a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.titulo-header a:hover{
+    color: #DC93AF;
+}
+  #panel-login-msg{
+      display:grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding: 2%;
+  }
   
+  .mensaje-login{
+      background-color: #fff;
+      width: 30%;
+      text-align:  center;
+      border: 2px solid #DC93AF;
+      border-radius: 20px;
+      
+  }
+  .mensaje-login p{
+      font-size: 1.3em;
+      padding: 2%;
+      color: #48001E;    
+  }
   .container{
    
     width: 600px;
@@ -138,7 +197,9 @@ body{
   .hide{
     display: none;
   }
-  
+  .panel-login-msg{
+      padding: 4%;
+  }
   @media (max-width:600px){
     .container{
         width: 350px; 

@@ -16,12 +16,18 @@ btnRegistrar.addEventListener('click', (e)=>{
   console.log(registroUsuario);
    Http.post('RegistroServer',registroUsuario)
            .then(response => response.json())
-           .then(data =>{
-             console.log('INSERT DATA');
-             console.log(data);
-            if(data !=='ERROR'){ 
-            closeModal();
-        }
-   });
+        .then( data => {
+           if(data !== null && data !== 'error'){
+            window.location.replace("index.html");
+   
+           }else{
+                      errorLogueo("Error al crear cuenta");
+
+           }
+                    
+    }).catch (err => {
+       console.log("error",err);
+       errorLogueo("Error al crear cuenta "+err);
+});
    
 });

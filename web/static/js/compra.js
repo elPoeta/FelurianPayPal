@@ -16,7 +16,7 @@ class Compra{
                  }
                 template +=   `</ul>
                                <div class="contenedor-total-btn">
-                                <h2>Total Compra $ ${data.total}</h2>  
+                                <h2>Total Compra $ ${data.total} / U$$ ${Number(data.total/40)}</h2>  
                                 </div>
                               </section>`;
             document.querySelector('#panel-content').innerHTML = template;         

@@ -8,6 +8,7 @@ import static elpoeta.felurian.util.CredencialApi.*;
 import elpoeta.felurian.util.GsonUtil;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 
 import java.util.ArrayList;
@@ -71,7 +72,7 @@ public class PaypalServer extends HttpServlet {
                 Item item = new Item();
                 item.setName(carrito.getItems().get(key).getProducto().getNombre());
                 item.setQuantity(String.valueOf(carrito.getItems().get(key).getCantidad()));
-                BigDecimal precio = carrito.getItems().get(key).getProducto().getPrecio().divide(new BigDecimal(40)).setScale(2, BigDecimal.ROUND_DOWN);
+                BigDecimal precio = carrito.getItems().get(key).getProducto().getPrecio().divide(new BigDecimal(40)).setScale(2, BigDecimal.ROUND_HALF_DOWN);
         
                 item.setPrice(String.valueOf(precio)); 
                //item.setPrice(String.valueOf(carrito.getItems().get(key).getProducto().getPrecio()));
@@ -80,19 +81,23 @@ public class PaypalServer extends HttpServlet {
                 items.add(item);
         
            }
-             
+            BigDecimal sumaItems = BigDecimal.ZERO;
+             for(int i=0; i<items.size(); i++){
+                 sumaItems = sumaItems.add(new BigDecimal(items.get(i).getPrice()));
+             }
             ItemList itemList = new ItemList();
             itemList.setItems(items);
                      
             Details details = new Details();
-            details.setShipping("0.00");
-            details.setSubtotal(String.valueOf(carrito.getTotal().divide(new BigDecimal(40)).setScale(2, BigDecimal.ROUND_DOWN)));
-            details.setTax("0.00");
+            //details.setShipping("0.00");
+            //details.setSubtotal(String.valueOf(carrito.getTotal().divide(new BigDecimal(40)).setScale(2, BigDecimal.ROUND_DOWN)));
+            details.setSubtotal(String.valueOf(sumaItems));
+            //details.setTax("0.00");
            
 
             Amount amount = new Amount();
             amount.setCurrency("USD");
-            amount.setTotal(String.valueOf(carrito.getTotal().divide(new BigDecimal(40)).setScale(2, BigDecimal.ROUND_DOWN)));
+            amount.setTotal(String.valueOf(sumaItems));
             amount.setDetails(details);
           
             

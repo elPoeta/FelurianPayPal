@@ -58,18 +58,18 @@ btnLogin.addEventListener('click', (e)=>{
            if(data !== null && data !== 'error'){
             window.location.replace("index.html");
            }else{
-                      errorLogueo("Error al iniciar sesion");
+                      msgLogueo("Error al iniciar sesion");
 
            }
                     
     }).catch (err => {
        console.log("error",err);
-       errorLogueo("Error al iniciar sesion "+err);
+       msgLogueo("Error al iniciar sesion "+err);
 });
   
 });
 
-function errorLogueo(msg){
+function msgLogueo(msg){
     let template = 
             `<div class="mensaje-login">
                  <p>${msg}</p>

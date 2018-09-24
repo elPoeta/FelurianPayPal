@@ -18,16 +18,17 @@ btnRegistrar.addEventListener('click', (e)=>{
            .then(response => response.json())
         .then( data => {
            if(data !== null && data !== 'error'){
-            window.location.replace("index.html");
-   
+            //window.location.replace("index.html");
+                    msgLogueo("Registro completado Inicia Sesion")
+                    sw2();
            }else{
-                      errorLogueo("Error al crear cuenta");
+                      msgLogueo("Error al crear cuenta");
 
            }
                     
     }).catch (err => {
        console.log("error",err);
-       errorLogueo("Error al crear cuenta "+err);
+       msgLogueo("Error al crear cuenta "+err);
 });
    
 });

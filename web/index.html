@@ -233,7 +233,8 @@
     
     onCancel: function (data, actions) {
             console.log("CANCEL!! ");
-          return actions.redirect();
+          //return actions.redirect();
+          Compra.verCompra();
         },
     onError: function (error) {
          console.log("ERROR! ",error);

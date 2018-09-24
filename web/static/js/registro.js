@@ -19,16 +19,16 @@ btnRegistrar.addEventListener('click', (e)=>{
         .then( data => {
            if(data !== null && data !== 'error'){
             //window.location.replace("index.html");
-                    msgLogueo("Registro completado Inicia Sesion")
+                    msgLogueo("Registro completado Inicia Sesion",'msg-color-ok')
                     sw2();
            }else{
-                      msgLogueo("Error al crear cuenta");
+                      msgLogueo("Error al crear cuenta",'msg-color-error');
 
            }
                     
     }).catch (err => {
        console.log("error",err);
-       msgLogueo("Error al crear cuenta "+err);
+       msgLogueo("Error al crear cuenta "+err, 'msg-color-error');
 });
    
 });

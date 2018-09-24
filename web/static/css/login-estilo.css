@@ -59,7 +59,14 @@ body{
   .mensaje-login p{
       font-size: 1.3em;
       padding: 2%;
-      color: #48001E;    
+         
+  }
+  .msg-color-ok{
+      color: #106022;
+  }
+  
+  .msg-color-error{
+      color: #530006;
   }
   .container{
    

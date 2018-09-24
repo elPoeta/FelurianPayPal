@@ -58,21 +58,21 @@ btnLogin.addEventListener('click', (e)=>{
            if(data !== null && data !== 'error'){
             window.location.replace("index.html");
            }else{
-                      msgLogueo("Error al iniciar sesion");
+                      msgLogueo("Error al iniciar sesion",'msg-color-error');
 
            }
                     
     }).catch (err => {
        console.log("error",err);
-       msgLogueo("Error al iniciar sesion "+err);
+       msgLogueo("Error al iniciar sesion "+err,'msg-color-error');
 });
   
 });
 
-function msgLogueo(msg){
+function msgLogueo(msg,color){
     let template = 
             `<div class="mensaje-login">
-                 <p>${msg}</p>
+                 <p class="${color}">${msg}</p>
              </div>`;
     document.querySelector('#panel-login-msg').innerHTML=template;
     

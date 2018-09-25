@@ -1,0 +1,19 @@
+.panel-usuario{
+    width: 10%;
+    left: 60%;
+    height: auto;
+    padding: 5px;
+    position: fixed;
+    z-index:100;
+    top:80px;
+    background-color:rgba(255, 255, 255, 0.95);
+    border: 2px solid #48001E;
+    border-radius: 15px;
+    opacity: 1;   
+    overflow: hidden;
+    text-align: center;
+}
+
+.hide-panel-usuario{
+    display : none;
+}

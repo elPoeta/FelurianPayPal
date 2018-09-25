@@ -39,3 +39,25 @@ function loading(on) {
       loadingsvg.style.display = "none";
   }
 }
+
+const login = document.querySelector('.login');
+
+login.addEventListener('click', e => {
+    if(document.querySelector('#login-header')){
+        location.replace('login.html');
+    }else
+         if(document.querySelector('#logout-header'))
+           {
+             if(!document.querySelector('#logout')){
+                 
+                 Usuario.panelUser();
+                 document.querySelector('.panel-usuario').classList.toggle('hide-panel-usuario');
+            } 
+            else{
+               
+               document.querySelector('.panel-usuario').classList.toggle('hide-panel-usuario');
+              }
+           
+        }
+  
+});

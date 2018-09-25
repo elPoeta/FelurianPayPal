@@ -2,6 +2,7 @@ const URL_CATEGORIAS = 'api/CategoriaServer';
 const URL_SUBCATEGORIAS = 'api/SubCategoriaServer';
 const URL_PRODUCTOS = 'api/ProductoServer?&q=';
 const URL_PRODUCTOS_SUBCATEGORIA = 'api/ProductoSubcategoria?&q=';
+const URL_LOGIN = 'LoginServer';
 const categorias = [];
 
 class Menu{
@@ -36,8 +37,9 @@ const iniciar = () =>{
           .catch ((error) =>{
               console.log(error);
 });
-
+       
        Carrito.consultarCarrito();  
+       Usuario.consultar(URL_LOGIN);
 };
 
 

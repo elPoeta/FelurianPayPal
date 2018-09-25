@@ -28,6 +28,15 @@ public class LoginServer extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        Usuario usuario = (Usuario) request.getSession().getAttribute("user");
+        if( usuario != null ){
+            
+            response.getWriter().print(GsonUtil.CONVERTIR.toJson(usuario));
+        }else{
+            response.getWriter().print(GsonUtil.CONVERTIR.toJson("error"));
+        }
+          
+        
     }
 
 
@@ -47,8 +56,8 @@ public class LoginServer extends HttpServlet {
         
             if(userBD.getEmail().equals(userParametro.getEmail()) && BCrypt.checkpw(userParametro.getPassword(), userBD.getPassword()) && userBD.isActivo())
             {   
-                request.getSession().setAttribute("User", userBD);
-               System.out.println("...Server logIN ..." + request.getSession().getAttribute("User") );
+                request.getSession().setAttribute("user", userBD);
+               System.out.println("...Server logIN ..." + request.getSession().getAttribute("user") );
                out.print(GsonUtil.CONVERTIR.toJson("ok"));
             
                

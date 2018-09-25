@@ -25,9 +25,7 @@
 
             <h1 class="titulo-header"><a href="index.html">Felurian</a></h1>
         </header>
-         <div id="panel-login-msg">
-             
-         </div>
+         <div id="panel-login-msg"></div>
   <div class="container">
         <div class="backbox">
           <div class="loginMsg">
@@ -53,11 +51,11 @@
         
     
         <div class="frontbox">
-          <div class="login">
+          <div class="login-front">
             <h2>LOGIN</h2>
             <div class="inputbox">
-              <input type="email" id="log-email" name="email" placeholder="  EMAIL">
-              <input type="password"  id="log-pass" name="password" placeholder="  PASSWORD">
+                <input type="email" id="log-email" name="email" placeholder="  EMAIL" required>
+              <input type="password"  id="log-pass" name="password" placeholder="  PASSWORD" required>
             </div>
             <p></p>
             <button id="btn-login">INICIAR</button>
@@ -66,11 +64,11 @@
           <div class="signup hide">
             <h2>CREAR CUENTA</h2>
             <div class="inputbox">
-              <input type="text" id="sign-nombre" name="nombre" placeholder="  NOMBRE">
-              <input type="text" id="sign-apellido" name="apelido" placeholder="  APELLIDO">
-              <input type="email" id="sign-email" name="email" placeholder="  EMAIL">
-              <input type="password" id="sign-pass" name="password" placeholder="  PASSWORD">
-              <input type="password" id="sign-confirm" name="conf-password" placeholder="  PASSWORD">
+              <input type="text" id="sign-nombre" name="nombre" placeholder="  NOMBRE" required>
+              <input type="text" id="sign-apellido" name="apelido" placeholder="  APELLIDO" required>
+              <input type="email" id="sign-email" name="email" placeholder="  EMAIL" required>
+              <input type="password" id="sign-pass" name="password" placeholder="  PASSWORD" required>
+              <input type="password" id="sign-confirm" name="conf-password" placeholder="  PASSWORD" required>
             </div>
             <button id="btn-registrar">CREAR</button>
           </div>

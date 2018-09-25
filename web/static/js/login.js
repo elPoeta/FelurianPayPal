@@ -6,7 +6,7 @@ const URL_LOGIN_SERVER = 'LoginServer';
 
 
 const  loginMsg = document.querySelector('.loginMsg');
-const  login = document.querySelector('.login');
+const  loginFront = document.querySelector('.login-front');
 const  signupMsg = document.querySelector('.signupMsg');
 const  signup = document.querySelector('.signup');
 const  frontbox = document.querySelector('.frontbox');
@@ -21,7 +21,7 @@ function sw1() {
     signupMsg.classList.toggle("visibility");
   
     signup.classList.toggle('hide');
-    login.classList.toggle('hide');
+    loginFront.classList.toggle('hide');
 }
 
 switch2.addEventListener('click', sw2);
@@ -32,7 +32,7 @@ function sw2() {
     signupMsg.classList.toggle("visibility");
   
     signup.classList.toggle('hide');
-    login.classList.toggle('hide');
+    loginFront.classList.toggle('hide');
   }
 //
 //setTimeout(function(){
@@ -56,7 +56,7 @@ btnLogin.addEventListener('click', (e)=>{
   .then( data => {
        console.log('log >>> ',data);
            if(data !== null && data !== 'error'){
-            window.location.replace("index.html");
+                location.replace("index.html");
            }else{
                       msgLogueo("Error al iniciar sesion",'msg-color-error');
 

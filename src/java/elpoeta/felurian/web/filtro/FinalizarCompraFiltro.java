@@ -28,7 +28,7 @@ public class FinalizarCompraFiltro implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
           System.out.println("... CompraFiltra ...............................");
-        Usuario userActual = (Usuario)((HttpServletRequest)request).getSession().getAttribute("User");
+        Usuario userActual = (Usuario)((HttpServletRequest)request).getSession().getAttribute("user");
         if ( userActual !=null ) { 
             System.out.println("...OK PrivadoFiltra ............................... " + userActual);
             chain.doFilter(request, response);

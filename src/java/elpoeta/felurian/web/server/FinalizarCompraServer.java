@@ -6,6 +6,7 @@
 package elpoeta.felurian.web.server;
 
 import elpoeta.felurian.domain.Carrito;
+import elpoeta.felurian.domain.Usuario;
 import elpoeta.felurian.util.GsonUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,8 +26,14 @@ public class FinalizarCompraServer extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        carrito = (Carrito) request.getSession().getAttribute("carro");
-        response.getWriter().print(GsonUtil.CONVERTIR.toJson(carrito));
+        //carrito = (Carrito) request.getSession().getAttribute("carro");
+        Usuario usuario = (Usuario) request.getSession().getAttribute("user");
+         if( usuario != null ){
+            
+            response.getWriter().print(GsonUtil.CONVERTIR.toJson(usuario));
+        }else{
+            response.getWriter().print(GsonUtil.CONVERTIR.toJson("error"));
+        }
     }
 
 

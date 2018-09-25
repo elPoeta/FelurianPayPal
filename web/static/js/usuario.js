@@ -25,9 +25,11 @@ class Usuario{
     let t = document.createTextNode("Mi cuenta"); 
     linkCuenta.setAttribute('href','#');
     linkCuenta.appendChild(t);
+    linkCuenta.className = "menu-usuario";
     liCuenta.appendChild(linkCuenta);
     t = document.createTextNode("Cerrar sesion"); 
     linkLogout.setAttribute('href','#');
+    linkLogout.className = "menu-usuario";
     linkLogout.setAttribute('id', `logout`);
     linkLogout.setAttribute("onclick", "cerrarSesion();");
     linkLogout.appendChild(t);
@@ -35,13 +37,7 @@ class Usuario{
     ul.appendChild(liCuenta);
     ul.appendChild(liLogout);
     div.appendChild(ul);
-    let template = 
-            `<div class="panel-usuario">
-                <ul>
-                    <li><a href="#">Mi cuenta</a></li>
-                    <li><a href="#">Cerrar sesion</a></li>
-                </ul>
-             <div>`;
+   
     document.querySelector('.contenedor').appendChild(div);
 }
 }

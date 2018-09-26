@@ -29,7 +29,8 @@
     text-align: center;
 }
 
-.titulo-header a:hover{
+.titulo-header a:hover, 
+.login:hover{
     color: #DC93AF;
 }
 

@@ -8,6 +8,8 @@ class Usuario{
                            login.innerText = data.nombre;
                            login.removeAttribute('id');
                            login.setAttribute('id','logout-header');
+                }else{
+                    document.querySelector('.login').innerText = 'Login';
                 }
         })
                 .catch(err =>{

@@ -40,6 +40,7 @@ const iniciar = () =>{
        
        Carrito.consultarCarrito();  
        Usuario.consultar(URL_LOGIN);
+           
 };
 
 
@@ -85,6 +86,7 @@ function buscarPorSubCategoria(id){
       .then(data => {
       Productos.viewProductos(data,'#panel-content');    
            loading(false);
+               
         })
        .catch(error =>{
            console.log(error);

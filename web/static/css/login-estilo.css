@@ -185,6 +185,15 @@ body{
     cursor: pointer;
   }
   
+  #switch1:hover,
+  #switch2:hover{
+    background-color: #fff;
+    color: #48001E;
+    border: 2px solid #48001E; 
+    cursor: pointer;
+    
+  }
+  
   /* Fade In & Out*/
   .login-front p {
     cursor: pointer;

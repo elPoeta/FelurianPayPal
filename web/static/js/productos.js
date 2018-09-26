@@ -15,7 +15,6 @@ class Productos{
             </div>`).join('')}</section>`;  
              document.querySelector('#paypal-button').style.display="none";
             document.querySelector(idPanel).innerHTML = template;
- 
             Lupa.lupaEventos();
             
     }

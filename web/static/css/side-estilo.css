@@ -5,8 +5,9 @@
 }
 #side-content{
     display: grid;
-    grid-template-columns: 500px;
-   
+    grid-template-columns: 1fr;
+    justify-content: center;
+   justify-items: center;
   
     
 }
@@ -15,8 +16,10 @@
 }
 .side-article img{
     box-sizing: border-box;
-    width: 100%;
+    width: 150px;
     padding: 5px;
+    margin: auto;
+    display:block;
 }
 .side-article h2{
     font-size: 1.8em;
